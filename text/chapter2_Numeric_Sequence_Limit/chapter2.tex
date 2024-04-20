@@ -1,0 +1,82 @@
+\chapter{Предел числовой последовательности}
+\section{Понятие числовой последовательности и её предела}
+\subsection{Окрестность}
+
+\dfn{Окрестности}{
+  \textbf{Окрестностью точки $a \in \bbR$} называется любой интервал $U_a = (\alpha; \beta) \subset \bbR$, содержащий точку $a$.
+  
+  \begin{center} \begin{tikzpicture}[>= latex]
+    %axis
+    \draw[thick, ->] (-5,0) -- (5,0);
+    \draw (5, .2) node {$x$};
+
+    %borders of neighborhood
+    \draw[very thick] (-3, .5) to [out=225, in=135] (-3, -.5);
+    \draw[very thick] (2, .5) to [out=-45, in=45] (2, -.5);
+
+    %neighborhood filling
+    \begin{scope}
+      \clip (-6, .25) rectangle (6, -.25);
+      \fill[pattern = north west lines] (-3, .5) to [out=225, in=135] (-3, -.5) -- (2, -.5) to [out=45, in=-45] (2, .5);
+    \end{scope}
+
+    %neighborhood naming
+    \draw (-.5, -.7) node {$U_a$};
+    \draw (-3, -.75) node {$\alpha$};
+    \draw ( 2, -.75) node {$\beta$};
+
+    %POINT a
+    \draw[thick] (0,0) circle (0.1);
+    \fill[thick] (0,0) circle (0.1);
+    \draw (0,0.4) node {$a$};
+  \end{tikzpicture} \end{center}
+
+  \textbf{$\eps$-окрестностью точки $a$} называется множество $U_a(\eps) = U(a, \eps) = \{ x \in \bbR: \ \left| x-a \right| < \eps \}$.
+  \begin{center} \begin{tikzpicture}[>= latex]
+    %axis
+    \draw[thick, ->] (-5,0) -- (5,0);
+    \draw (5, .2) node {$x$};
+
+    %borders of neighborhood
+    \draw[very thick] (-2, .5) to [out=225, in=135] (-2, -.5);
+    \draw[very thick] (2, .5) to [out=-45, in=45] (2, -.5);
+
+    %neighborhood filling
+    \begin{scope}
+      \clip (-6, .25) rectangle (6, -.25);
+      \fill[pattern = north west lines] (-2, .5) to [out=225, in=135] (-2, -.5) -- (2, -.5) to [out=45, in=-45] (2, .5);
+    \end{scope}
+
+    %neighborhood naming
+    \draw (0, -.7) node {$U_a(\eps)$};
+    \draw (-2, -.75) node {$a - \eps$};
+    \draw ( 2, -.75) node {$a + \eps$};
+
+    %POINT a
+    \draw[thick] (0,0) circle (0.1);
+    \fill[thick] (0,0) circle (0.1);
+    \draw (0,0.4) node {$a$};
+  \end{tikzpicture} \end{center}
+
+  \textbf{Проколотой окрестностью точки $a$} называеся множество $\mathring{U}_a = U_a \setminus \{ a \}$.\\
+  \textbf{Проколотой $\eps$-окрестностью точки $a$} называеся множество $\mathring{U}_a(\eps) = U_a(\eps) \setminus \{ a \}$.
+}
+
+\subsection{Числовые последовательности}
+
+\dfn{Числовая последовательность}{
+  Если каждому $n \in \bbN$ поставлено в соответствие число $x_n \in \bbR$, то задана числовая последовательность. Таким образом, \textbf{числовой последовательностью} называется функция натурального аргумента $f: \ \bbN \longrightarrow \bbR$.
+}
+
+\dfn{Элементы числовой последовательности}{
+  $x_1, x_2, x_3, \ldots, x_n, \ldots $ --- члены числовой последовательности.
+\[\begin{array}{lcr}
+    x_1 & \text{--- 1-й член последовательности}\\
+    x_2 & \text{--- 2-й член последовательности}\\
+    \ldots & \\
+    x_n & \text{--- n-й член последовательности}\\
+    \ldots & \\
+  \end{array}\]
+}
+
+
